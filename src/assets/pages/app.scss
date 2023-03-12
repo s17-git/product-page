@@ -1,0 +1,268 @@
+/* || Header (topbar) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+
+  h1 {
+    padding-left: pixelToRem(15);
+    margin-top: pixelToRem(-8);
+    font-weight: map-get($sizes, "bold");
+    font-size: pixelToRem(32);
+    letter-spacing: pixelTorem(-2);
+
+    @include desktop {
+      padding-left: unset;
+    }
+  }
+
+  div,
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  img,
+  button {
+    cursor: pointer;
+  }
+
+  nav {
+    img {
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  .cart {
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cart::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: pixelToRem(15);
+    width: pixelToRem(20);
+    content: attr(data-cart-length);
+    position: absolute;
+    right: pixelToRem(-8);
+    top: pixelToRem(-7);
+    z-index: 2;
+    text-align: center;
+    background: map-get($colors, "orange");
+    color: map-get($colors, "white");
+    font-weight: map-get($sizes, "bold");
+    border-radius: pixelToRem(10);
+    font-size: pixelToRem(9.6);
+  }
+
+  .navbar {
+    padding: pixelToRem(16) pixelToRem(32);
+    min-width: 50vw;
+    min-height: 100vh;
+    background: map-get($colors, "white");
+    font-weight: map-get($sizes, "bold");
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 6;
+    color: map-get($colors, "dark grayish blue");
+
+    li:first-child {
+      margin-bottom: pixelToRem(32);
+    }
+
+    li:first-child:hover {
+      border-bottom: none;
+    }
+
+    li {
+      list-style-type: none;
+      padding: pixelToRem(4.8) 0;
+      cursor: pointer;
+
+      &:hover {
+        color: map-get($colors, "very dark blue");
+        @include menuActive;
+      }
+    }
+
+    @include desktop {
+      position: relative;
+      min-width: auto;
+      min-height: auto;
+      display: flex;
+      background: none;
+      padding: 0;
+      font-weight: map-get($sizes, "regular");
+      margin-left: pixelToRem(40);
+      z-index: 2;
+
+      li {
+        padding: pixelToRem(32) pixelToRem(6.4);
+      }
+
+      li:first-child {
+        display: none;
+      }
+    }
+  }
+
+  .avatar {
+    border-radius: 50%;
+    margin-left: pixelToRem(20);
+    height: pixelToRem(33);
+
+    &:hover {
+      outline: solid 2px map-get($colors, "orange");
+    }
+  }
+
+  @include desktop {
+    width: 80vw;
+    margin: auto;
+    border-bottom: 1px solid map-get($colors, "grayish blue");
+    padding: 0;
+  }
+}
+
+/* || Page overlay */
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: map-get($colors, 'lightbox');
+  scroll-behavior: initial;
+  
+}
+
+
+/* || Main Section */
+main {
+  font-weight: map-get($sizes, "bold");
+
+  h2 {
+    text-transform: capitalize;
+    margin-top: pixelToRem(20);
+
+    @include desktop {
+      font-size: pixelToRem(40);
+      line-height: pixelToRem(44.8);
+    }
+  }
+
+ 
+
+  .product-details {
+    padding: pixelToRem($baseFontSize) pixelToRem(32);
+
+    &__slug {
+      color: map-get($colors, "orange");
+      text-transform: uppercase;
+      letter-spacing: pixelToRem(-1);
+      font-size: pixelToRem(12.8);
+      letter-spacing: pixelToRem(1.6);
+    }
+
+    &__desc {
+      margin-top: pixelToRem(20);
+      line-height: pixelToRem(24);
+      font-weight: map-get($sizes, "regular");
+      color: map-get($colors, "dark grayish blue");
+    }
+
+    &__prices {
+      display: flex;
+      align-items: center;
+      margin: pixelToRem(30) 0;
+
+      @include desktop {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @include desktop {
+      max-width: 50%;
+      padding: 0 pixelToRem(30);
+    }
+  }
+  .new-prices {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    p {
+      font-size: pixelToRem(22.4);
+      margin-right: 10%;
+    }
+
+    .discount {
+      background: map-get($colors, "pale-orange");
+      padding: pixelToRem(2) pixelToRem(7);
+      border-radius: 10%;
+      color: map-get($colors, "orange");
+    }
+  }
+
+  .old-price {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: line-through;
+    color: map-get($colors, "grayish blue");
+    font-size: pixelToRem(14.4);
+
+    @include desktop {
+      justify-content: flex-start;
+    }
+  }
+
+  .counter-wrapper {
+    @include desktop {
+      div:has(> button) {
+        width: 50%;
+      }
+
+      .quantities-counter {
+        width: 40%;
+      }
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .quantities-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: pixelToRem($baseFontSize);
+    background: map-get($colors, "light grayish blue");
+    border-radius: pixelToRem(8);
+    margin-bottom: pixelToRem(20);
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  @include desktop {
+    max-width: pixelToRem(967);
+    margin: pixelToRem(50) auto;
+    display: flex;
+    align-items: center;
+    padding: 0 pixelToRem(32);
+  }
+}

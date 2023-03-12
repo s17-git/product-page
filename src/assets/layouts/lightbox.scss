@@ -1,0 +1,31 @@
+/* || Thumbnail lightbox */
+.lightbox {
+  @include desktop {
+    position: absolute;
+    width: max-content;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 6;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .close-wrapper {
+      width: 100%;
+      padding: pixelToRem(20);
+    }
+
+    svg {
+      float: right;
+      cursor: pointer;
+    }
+
+    svg path {
+      fill: map-get($colors, "orange");
+    }
+  }
+}

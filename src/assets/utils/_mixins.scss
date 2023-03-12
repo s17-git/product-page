@@ -1,0 +1,20 @@
+
+@mixin desktop {
+   
+    @media only screen and (min-width: map-get($breakpoints, 'desktop')) {
+        @content;
+    }
+}
+
+@mixin menuActive {
+    border-bottom: pixelToRem(3) solid map-get($colors, 'orange');
+    font-weight: map-get($sizes, 'bold');
+    color: map-get($colors, 'very dark blue');
+}
+
+@mixin thumbnail-active {
+    opacity: 0.5;
+    outline: solid pixelToRem(3) map-get($colors, 'orange');
+}
+
+

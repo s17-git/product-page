@@ -1,0 +1,7 @@
+.active {
+    @include menuActive;
+  }
+  
+  .thumbnail-active {
+    @include thumbnail-active;
+  }
