@@ -39,7 +39,8 @@ const indexExists = (index) => thumbnails[index];
 
 const displayImgToDom = () => {
   src = thumbnails[currentIndex.value].src
-  imgPath = useLoadProduct(src);
+  
+  imgPath = useLoadProduct(src.split('-').slice(0, 3).join('-'));
   prodSrc.value.src = imgPath;
 };
 
