@@ -5,7 +5,7 @@
       <h1> {{ app.brand }} </h1>
       <ul v-if="showMenu" class="navbar" @click="useActiveMenu($event, 'active')">
         <li><img @click="showMenu = false, displayOverlay = false"  src="./assets/imgs/icon-close.svg" alt="Close icon"></li>
-        <li v-for=" (menu, index) in app.menus" :key="index"> {{ menu }} </li>
+        <li v-for=" (menu, index) in app.menus" :key="index"> <a href="#">{{ menu }} </a> </li>
       </ul>
     </nav>  
 

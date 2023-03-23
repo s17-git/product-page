@@ -15,7 +15,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      outline: none;
       border: none;
       background: map-get($colors, 'orange');
       color: map-get($colors, 'white');

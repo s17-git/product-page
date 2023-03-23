@@ -13,6 +13,7 @@ header {
     font-weight: map-get($sizes, "bold");
     font-size: pixelToRem(32);
     letter-spacing: pixelTorem(-2);
+    cursor: pointer;
 
     @include desktop {
       padding-left: unset;
@@ -36,6 +37,16 @@ header {
         display: none;
       }
     }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:active{
+    outline: none;
+    border: none;
   }
 
   .cart {
