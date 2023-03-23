@@ -41,8 +41,11 @@ const props = defineProps({
 
   /* || Basket */
   .basket {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    width: pixelToRem(300);
+    max-width: 300px;
+    max-height: max-content;
     top:  pixelToRem(60);
     left: 50%;
     transform: translate(-50%, 0);
@@ -62,10 +65,12 @@ const props = defineProps({
       padding: 1rem;
       font-weight: map-get($sizes, 'bold');
       border-bottom: pixelToRem(1) solid map-get($colors, 'grayish blue');
+      width: 100%;
     }
 
     &__content {
       padding: pixelToRem(5) pixelToRem(10);
+      width: 100%;
     }
     .products {
       display: flex;
@@ -101,7 +106,10 @@ const props = defineProps({
     }
 
     @include desktop {
-    transform: translate(100%, 5%);
+      width: 900px;
+      top: pixelToRem(80);
+      left: 95%;
+      // transform: translate(-40px, 0);
 
     }
   }

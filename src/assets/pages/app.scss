@@ -6,6 +6,7 @@ header {
   padding: 1rem;
   position: relative;
 
+  //app title
   h1 {
     padding-left: pixelToRem(15);
     margin-top: pixelToRem(-8);
@@ -97,7 +98,7 @@ header {
     }
 
     @include desktop {
-      position: relative;
+      position: initial;
       min-width: auto;
       min-height: auto;
       display: flex;
@@ -128,7 +129,7 @@ header {
   }
 
   @include desktop {
-    width: 80vw;
+    max-width: pixelToRem(1050);
     margin: auto;
     border-bottom: 1px solid map-get($colors, "grayish blue");
     padding: 0;
@@ -163,8 +164,6 @@ main {
     }
   }
 
- 
-
   .product-details {
     padding: pixelToRem($baseFontSize) pixelToRem(32);
 
@@ -196,7 +195,7 @@ main {
 
     @include desktop {
       max-width: 50%;
-      padding: 0 pixelToRem(30);
+      padding: 0;
     }
   }
   .new-prices {
@@ -259,10 +258,11 @@ main {
   }
 
   @include desktop {
-    max-width: pixelToRem(967);
+    max-width: pixelToRem(950);
     margin: pixelToRem(50) auto;
     display: flex;
     align-items: center;
-    padding: 0 pixelToRem(32);
+    justify-content: space-between;
+    // padding: 0 pixelToRem(32);
   }
 }
