@@ -1,29 +1,64 @@
-# ecom-prduct
+# Frontend Mentor - E-commerce product page solution
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Recommended IDE Setup
+## Table of contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Overview
 
-## Project Setup
+### The challenge
 
-```sh
-npm install
-```
+Users should be able to:
 
-### Compile and Hot-Reload for Development
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Open a lightbox gallery by clicking on the large product image
+- Switch the large product image by clicking on the small thumbnail images
+- Add items to the cart
+- View the cart and remove items from it
 
-```sh
-npm run dev
-```
+### Screenshot
 
-### Compile and Minify for Production
+![](./screenshot.jpg)
+![](./screen1.PNG)
+![](./screen2.PNG)
+![](./screen3.PNG)
+![](./screen4.PNG)
+![](./screen5.PNG)
+![](./screen6.PNG)
 
-```sh
-npm run build
-```
+
+### Links
+
+- Solution URL: [Github page](https://s17-git.github.io/product-page/)
+### Built with
+
+- Semantic HTML5 markup
+- SASS
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Vuejs 3](https://vuejs.org/) - JS Framework
+
+## Author
+
+- Website - [Ousmane Sylla (beekaranta)](https://beekaranta.com/)
+- Frontend Mentor - [@s17-git](https://www.frontendmentor.io/profile/s17-git)
+- Twitter - [@ousmanejrsylla](https://twitter.com/ousmanejrsylla)
+
+## Acknowledgments
+
+- Frontend Mentor - [@ChamuMutezva](https://www.frontendmentor.io/profile/ChamuMutezva)
